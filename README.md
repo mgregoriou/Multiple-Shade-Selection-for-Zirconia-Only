@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Multiple Shade Selection for Zirconia Only</title>
@@ -59,5 +59,17 @@
 
     <script>
         function displayShade() {
-            // Get the values entered in the input fields
-            let incisalShade = document.getElementById("incisal").val
+            // Get input values
+            let incisalShade = document.getElementById("incisal").value.trim();
+            let bodyShade = document.getElementById("body").value.trim();
+
+            // If incisal shade is empty, use body shade; if both are empty, display default message
+            let finalShade = incisalShade || bodyShade || "No shade entered";
+
+            // Display the selected shade
+            document.getElementById("output").innerText = finalShade;
+        }
+    </script>
+
+</body>
+</html>
