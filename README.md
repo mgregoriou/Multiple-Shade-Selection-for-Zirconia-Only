@@ -63,8 +63,8 @@
             let incisalShade = document.getElementById("incisal").value.trim();
             let bodyShade = document.getElementById("body").value.trim();
 
-            // If incisal shade is empty, use body shade; if both are empty, display default message
-            let finalShade = incisalShade || bodyShade || "No shade entered";
+            // Determine final shade
+            let finalShade = incisalShade !== "" ? incisalShade : (bodyShade !== "" ? bodyShade : "No shade entered");
 
             // Display the selected shade
             document.getElementById("output").innerText = finalShade;
