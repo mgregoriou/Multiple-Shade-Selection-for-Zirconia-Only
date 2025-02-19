@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
     <title>Multiple Shade Selection for Zirconia Only</title>
@@ -59,14 +59,5 @@
 
     <script>
         function displayShade() {
-            // Get the value entered in the Incisal Shade input field
-            let incisalShade = document.getElementById("incisal").value.trim();
-
-            // Display the Incisal Shade or show a default message
-            let outputMessage = incisalShade ? incisalShade : "No shade entered";
-            document.getElementById("output").innerText = outputMessage;
-        }
-    </script>
-
-</body>
-</html>
+            // Get the values entered in the input fields
+            let incisalShade = document.getElementById("incisal").val
