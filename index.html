@@ -9,7 +9,7 @@
             margin: 20px;
         }
         img {
-            width: 200px;
+            width: 500px; /* Increased logo size */
             margin-bottom: 10px;
         }
         h1 {
@@ -42,7 +42,7 @@
 <body>
 
     <!-- Company Logo -->
-    <img src="OIP.jpeg" alt="Company Logo" width "450">
+    <img src="OIP.jpeg" alt="Company Logo">
 
     <!-- Main Title and Subtitle -->
     <h1>Multiple Shade Selection for Zirconia Only</h1>
@@ -52,18 +52,18 @@
     <label>Incisal Shade: <input type="text" id="incisal"></label><br>
     <label>Body/Mid Shade: <input type="text" id="body"></label><br>
     <label>Gingival Shade: <input type="text" id="gingival"></label><br>
-    <button onclick="displayIncisalShade()">Submit</button>
+    <button onclick="displayShade()">Submit</button>
 
     <!-- Output Section -->
     <p>Selected Shade: <span id="output"></span></p>
 
     <script>
-        function displayIncisalShade() {
+        function displayShade() {
             // Get the value entered in the Incisal Shade input field
             let incisalShade = document.getElementById("incisal").value.trim();
 
             // Display the Incisal Shade or show a default message
-            let outputMessage = incisalShade ? incisalShade : "No incisal shade entered";
+            let outputMessage = incisalShade ? incisalShade : "No shade entered";
             document.getElementById("output").innerText = outputMessage;
         }
     </script>
