@@ -4,6 +4,8 @@
     <title> Shade Selector</title>
 </head>
 <body>
+       <!-- Company Logo -->
+    <img src="logo.png" alt="Company Logo" width="200">
     <h2>Shade Selection</h2>
     <label>Incisal Shade: <input type="text" id="incisal"></label><br>
     <label>Body/Mid Shade: <input type="text" id="body"></label><br>
