@@ -1,27 +1,72 @@
-</html
-<title> Multiple Shade Selection for Zirconia Only</title>
+
 <html>
 <head>
-    <title> Input all shades provided on Rx</title>
-</head>
+    <title>Multiple Shade Selection for Zirconia Only</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            width: 500px; /* Increased logo size */
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 16px;
+            color: gray;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-       <!-- Company Logo -->
-    <img src="OIP.jpeg alt="Company Logo" width="400">
-    <h2>Shade Selection</h2>
+
+    <!-- Company Logo -->
+    <img src="OIP.jpeg" alt="Company Logo">
+
+    <!-- Main Title and Subtitle -->
+    <h1>Multiple Shade Selection for Zirconia Only</h1>
+    <h3>Please input all shades provided on the prescription.</h3>
+
+    <!-- Shade Input Form -->
     <label>Incisal Shade: <input type="text" id="incisal"></label><br>
     <label>Body/Mid Shade: <input type="text" id="body"></label><br>
     <label>Gingival Shade: <input type="text" id="gingival"></label><br>
-    <button onclick="getIncisalShade()">Submit</button>
-    <p>Selected Incisal Shade: <span id="output"></span></p>
+    <button onclick="displayShade()">Submit</button>
+
+    <!-- Output Section -->
+    <p>Selected Shade: <span id="output"></span></p>
 
     <script>
-        function getIncisalShade() {
-            let incisalShade = document.getElementById("incisal").value;
-            
-            // Output only the incisal shade
-            document.getElementById("output").innerText = incisalShade || "No incisal shade entered";
+        function displayShade() {
+            // Get the value entered in the Incisal Shade input field
+            let incisalShade = document.getElementById("incisal").value.trim();
+
+            // Display the Incisal Shade or show a default message
+            let outputMessage = incisalShade ? incisalShade : "No shade entered";
+            document.getElementById("output").innerText = outputMessage;
         }
     </script>
+
 </body>
 </html>
