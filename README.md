@@ -1,12 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Shade Selection for Zirconia Only</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    img {
+      width: 500px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 16px;
+      color: gray;
+    }
+    input {
+      margin: 5px;
+      padding: 5px;
+      text-transform: uppercase;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Logo -->
+<img src="OIP.jpeg" alt="Company Logo" onerror="this.onerror=null; this.src='default-logo.png';">
+
+<!-- Title and Subtitle -->
+<h1>Multiple Shade Selection for Zirconia Only</h1>
+<h3>Please input all shades provided on the prescription.</h3>
+
+<!-- Shade Input Form -->
+<label>Incisal Shade (Rx): <input type="text" id="incisal"></label><br>
+<label>Body/Mid Shade: <input type="text" id="body"></label><br>
+<label>Gingival Shade: <input type="text" id="gingival"></label><br>
+<button onclick="displayShade()">Submit</button>
+
+<!-- Output Section -->
+<p>Final Converted Shade: <span id="output"></span></p>
+
 <script>
   const shadeMap = {
-    // Vita Classic
+    // Vita Classic Shades
     "A1": "A1", "A2": "A2", "A3": "A3", "A3.5": "A3.5", "A4": "A4",
     "B1": "B1", "B2": "B2", "B3": "B3", "B4": "B4",
     "C1": "C1", "C2": "C2", "C3": "C3", "C4": "C4",
     "D2": "D2", "D3": "D3", "D4": "D4",
 
-    // Your custom Rx-to-Puck shades
+    // Custom Rx-to-Puck Shades
     "OM1": "OM1", "OM2": "OM2", "OM3": "OM3", "1M1": "OM3", "1M2": "A1",
     "2L1.5": "B1", "2L2.5": "A2", "2M1": "A1", "2M2": "A2", "2M3": "A3",
     "2R1.5": "A1", "2R2.5": "A3", "3L1.5": "C2", "3L2.5": "B3", "3M1": "C1",
@@ -67,3 +128,6 @@
     document.getElementById("output").innerText = finalShade;
   }
 </script>
+
+</body>
+</html>
